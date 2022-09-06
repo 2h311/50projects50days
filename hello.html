@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <style>
+
+    div{
+      background-color: aqua;
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="menu">
+    <div id="item">Drop-Down</div>
+    <div id="submenu">
+      <a href="#">Link1</a>
+      <a href="#">Link2</a>
+      <a href="#">Link3</a>
+    </div>
+  </div>
+  
+  <script>
+  $(function(){
+    $("#item").click(function(){
+      $("#submenu").slideToggle(500);
+    });
+  });
+  </script>
+</body>
+</html>

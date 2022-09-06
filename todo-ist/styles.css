@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: rgba(237, 242, 242, 0.945);
+}
+
+h1{
+  font-size: 185px;
+  margin: 60px 0 -65px 0;
+  background: radial-gradient(circle, rgba(36,8,0,1) 0%, rgba(9,121,118,0.9612438725490196) 0%, rgba(235,0,255,0.894016981792717) 100%);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ul.todo-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.todo-item{
+  border-top: 2px solid rgba(237, 242, 242, 0.945);
+  background-color: white;
+  text-align: left;
+  padding: 18px 32px; 
+  font-size: x-large;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: rgb(57, 56, 56)
+}
+
+.div-form{
+  width: 30%;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+input.form-input{
+ padding: 18px 32px; 
+ width: 100%;
+ font-size: xx-large;
+ border: none;
+}
+
+input.form-input:focus{
+  outline-color: rgb(179, 131, 226);
+}
+
+input.form-input::placeholder{
+  color: rgba(61, 59, 59, 0.56);
+}
+
+p.main-warning{
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 120%;
+}
