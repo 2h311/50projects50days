@@ -49,7 +49,7 @@ form.addEventListener('submit', function(event){
 
 
 function updateTodoInUIToSessionStorage(){
-  todos = Array();
+todos = Array();
   todoList.childNodes.forEach((todo) =>{
     console.log(todo);
     todos.push({
@@ -58,4 +58,4 @@ function updateTodoInUIToSessionStorage(){
     });
   });
   localStorage.setItem("todos", JSON.stringify(todos));
-}
+};
