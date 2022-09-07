@@ -1,7 +1,7 @@
 let form = document.getElementById("todo-form");
 let formInput = document.querySelector(".form-input");
 let todoList = document.querySelector("ul.todo-list");
-let localTodos = JSON.parse(localStorage.getItem("todos"));
+let localTodos = JSON.parse(localStorage.getItem("vanilla-todos"));
 
 if (localTodos) localTodos.forEach(todoElement => addTodoToUI(todoElement));
 
@@ -57,5 +57,5 @@ todos = Array();
       "completed": todo.classList.contains('completed'),
     });
   });
-  localStorage.setItem("todos", JSON.stringify(todos));
+  localStorage.setItem("vanilla-todos", JSON.stringify(todos));
 };
