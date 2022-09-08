@@ -1,25 +1,48 @@
-const NUMBERS = "";
-const UPPERCASE = "";
-const LOWERCASE = "";
-const SYMBOLS = "";
+// TODO: user can bypass the maxvalue, by inputting a value into the number widget
 
-const password_length_value = document.querySelector("#password_length").value;
-const password_length = Number(password_length_value);
-const include_uppercase_letters = document.querySelector("#include_uppercase_letters").checked;
-const include_lowercase_letters = document.querySelector("#include_lowercase_letters").checked;
-const include_numbers = document.querySelector("#include_numbers").checked;
-const include_symbols = document.querySelector("#include_symbols").checked;
-
-for (let number=0; number<password_length; number++){
-    console.log(number);
-}
-
-
-
-
-
+const NUMBERS = "0123456789";
+const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
+const SYMBOLS = `!"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~`;
 
 function copyPasswordToClipboard(){
     document.querySelector("textarea").select();
     document.execCommand("copy");
+
+    alertDiv = document.querySelector(".alert");
+    alertDiv.innerText = "Password copied to clipboard";
+    setTimeout(() => alertDiv.innerHTML="&nbsp;", 100);
+
 };
+
+function generateString(){
+    const password_length_value = document.querySelector("#password_length").value;
+    const password_length = Number(password_length_value);
+    const include_uppercase_letters = document.querySelector("#include_uppercase_letters").checked;
+    const include_lowercase_letters = document.querySelector("#include_lowercase_letters").checked;
+    const include_numbers = document.querySelector("#include_numbers").checked;
+    const include_symbols = document.querySelector("#include_symbols").checked;
+    
+    letters = "";
+    if (include_uppercase_letters) letters += UPPERCASE;
+    if (include_lowercase_letters) letters += LOWERCASE;
+    if (include_numbers) letters += NUMBERS;
+    if (include_symbols) letters += SYMBOLS;
+    
+    let randomStrings = ""; 
+    for (let number=0; number<password_length; number++){
+        randomString = letters.charAt(Math.floor(Math.random() * letters.length));
+        randomStrings += randomString;
+    };
+    console.log(randomStrings);
+    return randomStrings;
+};
+
+const generatePasswordButton = document.querySelector('#generate-password');
+generatePasswordButton.addEventListener("click", function(event){
+    password = generateString();
+    document.querySelector("#show-password").innerHTML = password;
+});
+
+const copyToClipboardButton = document.querySelector("#copyButton");
+copyToClipboardButton.addEventListener("click", copyPasswordToClipboard);

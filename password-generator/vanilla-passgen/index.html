@@ -9,12 +9,14 @@
 </head>
 <body>
 
+  <div class="alert">&nbsp;</div>
+
   <h1>Password Generator</h1>
   
   <div>
-    <textarea name="generated-password" id="generated-password" cols="30" rows="10">jksdjksdjsd</textarea>
+    <textarea name="generated-password" id="show-password" cols="30" rows="10"></textarea>
     <!-- <div id="generated-password"></div> -->
-    <button>Copy</button>
+    <button id="copyButton">Copy</button>
   </div>
 
   <div>
@@ -42,7 +44,7 @@
     <input type="checkbox" name="include_symbols" id="include_symbols" checked>
   </div>
 
-  <input type="submit" value="Generate Password">
+  <button type="submit" id="generate-password">Generate Password</button>
 
   <script src="./script.js"></script>
 </body>
