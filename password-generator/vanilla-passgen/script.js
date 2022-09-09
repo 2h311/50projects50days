@@ -1,5 +1,6 @@
 // TODO: wait for the dom to be ready before loading the JS
 // TODO: user can bypass the maxvalue, by inputting a value into the number widget
+// TODO: the copy to clipboard doesn't work as good as it should. I'll be working on this at a later time.
 
 const NUMBERS = "0123456789";
 const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
