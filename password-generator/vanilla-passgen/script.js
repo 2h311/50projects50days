@@ -1,3 +1,4 @@
+// TODO: wait for the dom to be ready before loading the JS
 // TODO: user can bypass the maxvalue, by inputting a value into the number widget
 
 const NUMBERS = "0123456789";
@@ -11,7 +12,7 @@ function copyPasswordToClipboard(){
 
     alertDiv = document.querySelector(".alert");
     alertDiv.innerText = "Password copied to clipboard";
-    setTimeout(() => alertDiv.innerHTML="&nbsp;", 100);
+    setTimeout(() => alertDiv.innerHTML="&nbsp;", 5000);
 
 };
 
