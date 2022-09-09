@@ -9,14 +9,79 @@ body{
   background-color: #3b3b98;
   color: #fff;
   font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;  
+  overflow: hidden;
 }
 
 div.container{
   background-color: #23235b;
-  width: 35%;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5%;
 }
 
 .container-heading{
   text-align: center;
   font-size: larger;
+  padding: 3%;
+}
+
+.container-heading h1{
+  margin: 0;
+}
+
+.password_options{
+  padding: 2%;
+}
+
+.option{
+  padding: 5px 0;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+}
+
+button#generate-password{
+  background-color: #3b3b98;
+  border: 0;
+  padding: 2%;
+  font-size: large;
+  color: white;
+}
+
+div.password-area{
+  width: 100%;
+  height: 52px;
+  display: inherit;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2%;
+}
+
+#show-password{
+  background-color: transparent;
+  font-size: 200%;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+button#copyButton{
+  background-color: #3b3b98;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.alert{
+  font-size: large;
+  color: #b0b0f6;
 }

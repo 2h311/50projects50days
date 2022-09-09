@@ -7,13 +7,12 @@ const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
 const SYMBOLS = `!"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~`;
 
 function copyPasswordToClipboard(){
-    document.querySelector("textarea").select();
+    document.querySelector("#show-password").select();
     document.execCommand("copy");
 
     alertDiv = document.querySelector(".alert");
     alertDiv.innerText = "Password copied to clipboard";
-    setTimeout(() => alertDiv.innerHTML="&nbsp;", 5000);
-
+    setTimeout(() => alertDiv.innerHTML="&nbsp;", 5000); 
 };
 
 function generateString(){
@@ -42,7 +41,7 @@ function generateString(){
 const generatePasswordButton = document.querySelector('#generate-password');
 generatePasswordButton.addEventListener("click", function(event){
     password = generateString();
-    document.querySelector("#show-password").innerHTML = password;
+    document.querySelector("#show-password").value = password;
 });
 
 const copyToClipboardButton = document.querySelector("#copyButton");
