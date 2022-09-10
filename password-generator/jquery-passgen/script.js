@@ -1,54 +1,55 @@
-// TODO: wait for the dom to be ready before loading the JS
-// TODO: user can bypass the maxvalue, by inputting a value into the number widget
 // TODO: the copy to clipboard doesn't work as good as it should. I'll be working on this at a later time.
 
-const NUMBERS = "0123456789";
-const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
-const SYMBOLS = `!"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~`;
-
-function copyPasswordToClipboard(){
-    // TODO: you can't copy an empty value
-    const showPasswordInput = $("#show-password")[0];
-    if (showPasswordInput.value){
-        document.querySelector("#show-password").select();
-        document.execCommand("copy");
-        // show alert
-        alertDiv = document.querySelector(".alert");
-        alertDiv.innerText = "Password copied to clipboard";
-        setTimeout(() => alertDiv.innerHTML="&nbsp;", 5000); 
-    }
-
-};
-
-function generateString(){
-    const password_length_value = document.querySelector("#password_length").value;
-    const password_length = Number(password_length_value);
-    const include_uppercase_letters = document.querySelector("#include_uppercase_letters").checked;
-    const include_lowercase_letters = document.querySelector("#include_lowercase_letters").checked;
-    const include_numbers = document.querySelector("#include_numbers").checked;
-    const include_symbols = document.querySelector("#include_symbols").checked;
+$(document).ready(function(){
     
-    letters = "";
-    if (include_uppercase_letters) letters += UPPERCASE;
-    if (include_lowercase_letters) letters += LOWERCASE;
-    if (include_numbers) letters += NUMBERS;
-    if (include_symbols) letters += SYMBOLS;
-    
-    let randomStrings = ""; 
-    for (let number=0; number<password_length; number++){
-        randomString = letters.charAt(Math.floor(Math.random() * letters.length));
-        randomStrings += randomString;
+    const NUMBERS = "0123456789";
+    const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
+    const SYMBOLS = `!"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~`;
+
+    function copyPasswordToClipboard(){
+        const showPasswordInput = $("#show-password")[0];
+        if (showPasswordInput.value){
+            showPasswordInput.select();
+            document.execCommand("copy");
+            // show alert
+            alertDiv = $(".alert");
+            alertDiv.text("Password copied to clipboard");
+            setTimeout(() => alertDiv.html("&nbsp;"), 5000); 
+        }
     };
-    console.log(randomStrings);
-    return randomStrings;
-};
 
-const generatePasswordButton = document.querySelector('#generate-password');
-generatePasswordButton.addEventListener("click", function(event){
-    password = generateString();
-    document.querySelector("#show-password").value = password;
+    function generateString(){
+        const password_length_value = $("#password_length")[0].value;
+        const password_length = Number(password_length_value);
+        const include_uppercase_letters = $("#include_uppercase_letters")[0].checked;
+        const include_lowercase_letters = $("#include_lowercase_letters")[0].checked;
+        const include_numbers = $("#include_numbers")[0].checked;
+        const include_symbols = $("#include_symbols")[0].checked;
+        
+        letters = "";
+        if (include_uppercase_letters) letters += UPPERCASE;
+        if (include_lowercase_letters) letters += LOWERCASE;
+        if (include_numbers) letters += NUMBERS;
+        if (include_symbols) letters += SYMBOLS;
+        
+        let randomStrings = ""; 
+        for (let number=0; number<password_length; number++){
+            randomString = letters.charAt(Math.floor(Math.random() * letters.length));
+            randomStrings += randomString;
+        };
+        console.log(randomStrings);
+        return randomStrings;
+    };
+
+    const generatePasswordButton = $("#generate-password");
+    generatePasswordButton.on("click", function(event){
+        password = generateString();
+        $("#show-password")[0].value = password;
+    });
+    
+    const copyToClipboardButton = $("#copyButton");
+    copyToClipboardButton.on("click", copyPasswordToClipboard);
 });
 
-const copyToClipboardButton = $("#copyButton");
-copyToClipboardButton.on("click", copyPasswordToClipboard);
+
