@@ -5,3 +5,7 @@
 3 - github-profiles
 4 - quizapp
 5 - unknown
+
+## htmlandjs first, css comes later
+## wagmi  
+## 50/50
