@@ -8,16 +8,17 @@ const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
 const SYMBOLS = `!"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~`;
 
 function copyPasswordToClipboard(){
-    const showPasswordInput = document.querySelector("#show-password");
+    // TODO: you can't copy an empty value
+    const showPasswordInput = $("#show-password")[0];
     if (showPasswordInput.value){
-        showPasswordInput.select();
+        document.querySelector("#show-password").select();
         document.execCommand("copy");
-
-        // show alert message
+        // show alert
         alertDiv = document.querySelector(".alert");
         alertDiv.innerText = "Password copied to clipboard";
         setTimeout(() => alertDiv.innerHTML="&nbsp;", 5000); 
     }
+
 };
 
 function generateString(){
@@ -49,5 +50,5 @@ generatePasswordButton.addEventListener("click", function(event){
     document.querySelector("#show-password").value = password;
 });
 
-const copyToClipboardButton = document.querySelector("#copyButton");
-copyToClipboardButton.addEventListener("click", copyPasswordToClipboard);
+const copyToClipboardButton = $("#copyButton");
+copyToClipboardButton.on("click", copyPasswordToClipboard);
