@@ -57,8 +57,9 @@ body{
     column-gap: 16px;
     padding: 2rem;
     border-radius: 10px;
-    max-width: 700px;
+    max-width: 800px;
     box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+    visibility: hidden;
 }
 
 .userAvatar{
