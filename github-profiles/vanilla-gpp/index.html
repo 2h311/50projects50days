@@ -8,25 +8,11 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  
-  <div class="heading-container">
-    <h1 class="h1">Github Profiles</h1>
-    <form>
-      <input type="text" id="search-user" placeholder="Search a Github User" autocomplete="off">
-    </form> 
-    <p class="small">* Please press enter to submit</p>
-  </div>
+  <form class="user-form" id="form">
+    <input type="text" id="search" placeholder="Search a Github User">
+  </form>
 
-  <div class="info-container">
-    <div class="info-container--inner">
-      
-      <div class="avatar-div">
-        <img src="" alt="">
-      </div>
-      <main class="user"></main>
-      <div class="notification"></div>
-    </div>
-  </div>
+  <main id="main"></main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
   <script src="index.js"></script>
