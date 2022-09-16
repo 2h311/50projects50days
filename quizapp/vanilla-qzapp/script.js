@@ -48,7 +48,6 @@ questionCText.innerText = quizzes[0].c
 const questionDText = document.getElementById("_d_text")
 questionDText.innerText = quizzes[0].d
 
-// const answerElement = document.
 
 const submitButton = document.querySelector("button")
 submitButton.addEventListener("click", (e)=>{
