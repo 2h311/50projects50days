@@ -43,11 +43,11 @@ function deselectAllAnswers(){
 function loadQuestion(){
     deselectAllAnswers()
     const currentQuiz = quizzes[quizCount]
-    questionElement.innerText = currentQuiz.question
-    questionAText.innerText = currentQuiz.a
-    questionBText.innerText = currentQuiz.b
-    questionCText.innerText = currentQuiz.c
-    questionDText.innerText = currentQuiz.d
+    questionElement.text(currentQuiz.question) 
+    questionAText.text(currentQuiz.a) 
+    questionBText.text(currentQuiz.b)
+    questionCText.text(currentQuiz.c)
+    questionDText.text(currentQuiz.d)
 }
 
 function getUserAnswer(){
@@ -65,24 +65,22 @@ function getUserAnswer(){
     if (quizCount < quizzes.length){
         loadQuestion()
     }else{
-        document.querySelector(".container").innerHTML = `
-        <h2>You answered ${score}/${quizzes.length} correctly</h2>
-        <button onclick="location.reload()">Reload</button>
-        `
+        $(".container").html(`
+            <h2>You answered ${score}/${quizzes.length} correctly</h2>
+            <button onclick="location.reload()">Reload</button>
+        `) 
     }
 }
 
-const questionRadios = document.querySelectorAll("input[type=radio]");
+const questionRadios = $("input[type=radio]").splice(0, 4);
 
-const questionElement = document.getElementById("question")
-const questionAText = document.getElementById("a_text")
-const questionBText = document.getElementById("b_text")
-const questionCText = document.getElementById("c_text")
-const questionDText = document.getElementById("d_text")
+const questionElement = $("#question")
+const questionAText = $("#a_text")
+const questionBText = $("#b_text")
+const questionCText = $("#c_text")
+const questionDText = $("#d_text")
 
 let quizCount = 0, score = 0
 
 loadQuestion()
-
-const submitButton = document.querySelector("button")
-submitButton.addEventListener("click", event =>  getUserAnswer())
+$("button").on("click", event =>  getUserAnswer())
