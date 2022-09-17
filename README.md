@@ -1,12 +1,15 @@
 # 50projects50days
 50 F.E projects to be finished in L.T.E 50 days 
-* todoist
-* passwordgen
+* Todo List
+* Password Generator
 * github-profiles
-* quizapp
+* Quiz App
+* Password Strength Background
 
-* unknown
+* Verify Account
 
 ## htmlandjs first, css comes later
 ## wagmi  
 ## 50/50
+
+touch index.html style.css script.js
