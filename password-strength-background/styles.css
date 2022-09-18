@@ -7,4 +7,17 @@ body{
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+div#background{
+    background: url(photo-1556745757-8d76bdb6984b.jpeg) no-repeat center center/cover;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    z-index: -1;
+    filter: blur(40px);
 }
