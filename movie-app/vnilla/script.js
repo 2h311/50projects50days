@@ -8,6 +8,7 @@ const search = document.getElementById("search")
 
 async function getMovies(url) {
     const res = await axios.get(url)
+    console.log(res)
     showMovies(res.data.results)
 }
 
@@ -23,6 +24,8 @@ const get_movie_rating = vote => {
 }
 
 function showMovies(movies) {
+    main.innerHTML = ''
+
     for (movie of movies) {
         const { title, poster_path, vote_average, overview } = movie
         console.log(title)
@@ -44,17 +47,17 @@ function showMovies(movies) {
     }
 }
 
-
 getMovies(API_URL)
 
 form.addEventListener("submit", event => {
     event.preventDefault()
     
-    searchMovie = search.value
-    if (searchMovie) {
-        console.log(searchMovie)
+    searchTerm = search.value
+    if (searchTerm) {
+        console.log(searchTerm)
         search.value = ""
+        getMovies(SEARCH_API + searchTerm)
+    } else {
+        window.location.reload()
     }
-
-
 })

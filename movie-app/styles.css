@@ -7,6 +7,7 @@
 body {
   height: 100vh;
   margin: 0;
+  background-color: #22254b;
 }
 
 header {
@@ -14,6 +15,7 @@ header {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 #search {
@@ -47,7 +49,6 @@ span.green {
 }
 
 #movies {
-  background-color: #22254b;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
