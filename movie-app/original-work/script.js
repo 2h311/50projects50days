@@ -44,9 +44,9 @@ function showMovies(movies) {
                 <h3>${title}</h3>
                 <span class="${getClassByRate(vote_average)}">${vote_average}</span>
             </div>
-            <div class="overview">
+            <div class="movie-overview">
                 <h3>Overview</h3>
-                ${overview}
+                <p>${overview}</p>
             </div>
         `
         main.appendChild(movieEl)
