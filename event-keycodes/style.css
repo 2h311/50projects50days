@@ -29,7 +29,7 @@ body {
   position: relative;
 }
 .key small {
-  padding: absolute;
+  position: absolute;
   top: -24px;
   left: 0;
   text-align: center;
