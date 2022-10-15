@@ -4,38 +4,41 @@
 
 - Auto Text Effect
 - Contact App
+- Content Placeholder
 - Dad Jokes
+
 - Double Click Heart
 - Drag N Drop
 - Drawing App
 - Event Keycodes
+
 - Faq Collapse
+- Feedback UI Design
+- Github Profiles
+- Good Cheap Fast
 
-feedback-ui-design
-github-profiles
-good-cheap-fast
-image-carousel
+- Image Carousel
+- Incrementing Counter
+- Live User Filter
+- Mobile Tab Navigation
 
-incrementing-counter
-live-user-filter
-mobile-tab-navigation
-movie-app
+- Movie App
+- Notes App
+- Password Generator
+- Password Strength Background
 
-notes-app
-password-generator
-password-strength-background
-progress-steps
+- Progress Steps
+- Quizapp
+- Random Image Feed
+- Rotating Navigation Animation
 
-quizapp
-random-image-feed
-rotating-navigation-animation
-sound-board
+- Sound Board
+- Split Landing Page
+- Theme Clock
+- Toast Notification
 
-split-landing-page
-theme-clock
-toast-notification
-todo-ist
-verify-account-ui
+- Todoist
+- Verify Account UI
 
 ## htmlandjs first, css comes later
 
