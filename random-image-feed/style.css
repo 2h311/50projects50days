@@ -28,4 +28,41 @@ body {
   margin: 10px;
 }
 
+.fa {
+  color: #13404f;
+  animation: rotate 1ms infinite;
+}
+
+.ids-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 22px 0 12px;
+}
+.ids-hourglass::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid #13404f;
+  border-color: #13404f transparent #13404f transparent;
+  animation: rotate 1.2s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
