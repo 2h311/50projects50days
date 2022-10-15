@@ -34,6 +34,7 @@
 
 - Sound Board
 - Split Landing Page
+- Sticky Navbar
 - Theme Clock
 - Toast Notification
 
