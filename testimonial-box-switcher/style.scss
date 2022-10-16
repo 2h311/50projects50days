@@ -2,5 +2,96 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+    font-family: 'Merriweather', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.testimonial{
+    line-height: 28px;
+    text-align: justify;
+
+    &-container{
+        background-color: #476ce4;
+        color: #fff;
+        border-radius: 15px;
+        margin: 20px auto;
+        padding: 50px 80px;
+        max-width: 768px;
+        position: relative;
+    }
+}
+
+.fa-quote{
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 28px;
+    position: absolute;
+    top: 70px;
+
+    &-right{
+        left: 40px;
+    }
+    &-left{
+        right: 40px;
+    }
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & &-image{
+        border-radius: 50%;
+        height: 75px;
+        width: 75px;
+        object-fit: cover;
+    }
+
+    & &-details{
+        margin-left: 10px;
+    }
+
+    & &name{
+        margin: 0;
+    }
+
+    & .role{
+        font-weight: normal;
+        margin: 10px 0;
+    }
+}
+
+.progress-bar{
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    animation: grow 10s linear infinite;
+    transform-origin: left;
+}
+
+@keyframes grow{
+    0%{
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 768px){
+    .testimonial-container{
+        padding: 22px 36px;
+    }
+
+    .fa-quote{
+        display: none;
+    }
 }
