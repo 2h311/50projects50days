@@ -36,8 +36,8 @@
 - Split Landing Page
 - Sticky Navbar
 - Theme Clock
-- Toast Notification
 
+- Toast Notification
 - Todoist
 - Verify Account UI
 
@@ -49,3 +49,5 @@
 
 touch index.html style.scss script.js
 sass --watch style.scss style.css
+
+<script src="https://kit.fontawesome.com/c14697ff99.js" crossorigin="anonymous"></script>
