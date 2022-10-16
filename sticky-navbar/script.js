@@ -9,8 +9,7 @@ function fixNav(){
     }
 }
 
-// this only works in this scenario
-// if the page loads. it's a goner
+// this only works in this scenario, if the page loads. it's a goner
 const navLinks = document.querySelector("ul.nav-links")
 const navLinkList = document.querySelectorAll("a.nav-link")
 navLinks.addEventListener("click", function(event){
