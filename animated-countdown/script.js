@@ -16,6 +16,7 @@ function runAnimation() {
         const nextToLast = nums.length - 1
 
         num.addEventListener("animationend", (e) => {
+            console.log(e)
             if (e.animationName === "goIn" && idx !== nextToLast) {
                 num.classList.remove("in")
                 num.classList.add("out")
