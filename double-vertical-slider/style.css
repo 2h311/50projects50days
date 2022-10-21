@@ -29,7 +29,7 @@ body {
 }
 .slider-container .action-buttons .up-button {
   transform: translateY(-100%);
-  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
@@ -39,6 +39,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 0.5 ease-in-out;
 }
 .left-slide > div {
   height: 100%;
