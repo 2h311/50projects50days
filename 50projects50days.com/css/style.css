@@ -61,7 +61,6 @@ h2 {
 }
 .main-nav .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .main-nav ul {
@@ -82,7 +81,7 @@ h2 {
 .showcase {
   height: 600px;
   position: relative;
-  background: url(../img/showcase-bg.png) no-repeat center center;
+  background: url("../img/showcase-bg.png") no-repeat center center;
   z-index: 2;
 }
 .showcase .container {
@@ -97,13 +96,12 @@ h2 {
 .showcase h2 {
   color: rgb(156, 78, 233);
   margin-bottom: 22px;
-  font-size: 25px;
+  font-size: 36px;
 }
 .showcase h1 {
-  font-size: 40px;
+  font-size: 54px;
   letter-spacing: 3px;
   line-height: 1.7;
-  font-weight: 600;
 }
 .showcase h4 {
   color: #ccc;
@@ -293,6 +291,106 @@ h2 {
 }
 .text-success {
   color: #ffa500;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.projects img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.projects .day {
+  background-color: rebeccapurple;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.projects > div {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+}
+.projects > div:hover .content {
+  opacity: 0.98;
+}
+.projects .content {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9901ff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.3s ease-in;
+}
+.projects .content p {
+  margin: 15px 5px;
+}
+
+@media (max-width: 960px) {
+  .showcase h1 {
+    font-size: 42px;
+  }
+  .projects {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .showcase h1 {
+    font-size: 32px;
+  }
+  .logo {
+    width: 145px;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-footer ul {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 75%;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .about-a {
+    grid-template-columns: 1fr;
+  }
+  .about-a .repo {
+    height: 100px;
+  }
+  .about-b img {
+    width: 100%;
+  }
+  .about-e, .about-d {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .main-footer .container {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
