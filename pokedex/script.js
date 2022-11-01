@@ -15,7 +15,7 @@ const colors = {
   normal: "#F5F5F5",
 };
 const poke_container = document.getElementById("poke-container");
-const pokemon_count = 5;
+const pokemon_count = 10;
 const main_types = Object.keys(colors);
 
 const fetchPokemons = async () => {
@@ -57,7 +57,9 @@ const createPokemonCard = (pokemon) => {
     <div class="info">
         <span class="number">${id_}</span>
         <h3>${name_}</h3>
-        <small class="type">Type: <span>${titleHelper(poke_type)}</span></small>
+        <small class="type">Type:&nbsp;&nbsp;<span class="real-type">${titleHelper(
+          poke_type
+        )}</span></small>
     </div>
     `;
   pokemonEl.innerHTML = pokemonInnerHTML;
