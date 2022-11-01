@@ -86,15 +86,24 @@ var getPokemon = function (id) { return __awaiter(_this, void 0, void 0, functio
                 return [4 /*yield*/, res.json()];
             case 2:
                 data = _a.sent();
+                console.log(data);
                 createPokemonCard(data);
                 return [2 /*return*/];
         }
     });
 }); };
 var createPokemonCard = function (pokemon) {
-    console.log(pokemon.name);
     var pokemonEl = document.createElement("div");
     pokemonEl.classList.add("pokemon");
     var name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+    var id = pokemon.id.toString().padStart(3, "0");
+    var poke_types = pokemon.types.map(function (type) { return type.type.name; });
+    var poke_type = main_types.find(function (type) { return poke_types.indexOf(type) > -1; });
+    var color = colors[poke_type];
+    pokemonEl.style.backgroundColor = color;
+    var pokemonInnerHTML = "\n    <div class=\"img-container\"></div>\n    ";
+    pokemonEl.innerHTML = pokemonInnerHTML;
+    poke_container.appendChild(pokemonEl);
+    console.log(name, id, poke_types, color);
 };
 fetchPokemons();
